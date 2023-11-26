@@ -5,7 +5,7 @@
 FROM python:3.9.18-alpine3.18
 
 # set a directory for the app
-WORKDIR /usr/src
+WORKDIR /usr/src/app
 
 # copy all the files to the container
 COPY . .
