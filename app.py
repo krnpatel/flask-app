@@ -9,11 +9,11 @@ def index():
 
 @app.route("/hello")
 def greetings():
-    return "<html><color='red'> <h1> <b> Good Morning - V3 </b></h1></color></html>"
+    return "<html> <h1 style='color:red;'> <b> Good Morning - V4 </b></h1></html>"
 
 @app.route("/kiran")
 def greeHello():
-    return "<html><h1> Hello Kiran </h1></html>"
+    return "<html><h1 style='color:blue;'> Hello Kiran </h1></html>"
 
 @app.route("/greet/<string:name>")
 def getName(name):
