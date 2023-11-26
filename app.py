@@ -9,7 +9,7 @@ def index():
 
 @app.route("/hello")
 def greetings():
-    return "<html><h1> <b> Good Morning - V2 </b></h1></html>"
+    return "<html><color='red'> <h1> <b> Good Morning - V3 </b></h1></color></html>"
 
 @app.route("/kiran")
 def greeHello():
