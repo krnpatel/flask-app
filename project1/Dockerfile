@@ -5,7 +5,7 @@
 FROM python:3.9.18-alpine3.18
 
 # set a directory for the app
-WORKDIR /usr/src/app
+WORKDIR /usr/src
 
 # copy all the files to the container
 COPY . .
@@ -17,4 +17,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8081
 
 # run the command
-CMD ["python", "app.py"]
+CMD ["python", "./app.py"]
