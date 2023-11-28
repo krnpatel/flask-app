@@ -2,7 +2,15 @@ version: 0.2
 
 phases:
   pre_build:
-    commands: 
+    commands:
+      - echo "Checking for changes in project2..."
+      - |
+        if git diff --name-only $CODEBUILD_RESOLVED_SOURCE_VERSION | grep -q '^project2/'; then
+          echo "Changes found in project2. Proceeding with the build..."
+        else
+          echo "No changes in project2. Skipping the build..."
+          exit 0
+        fi 
       - echo Logging into Amazon ECR..
       - aws --version
       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 165446266030.dkr.ecr.ap-south-1.amazonaws.com
