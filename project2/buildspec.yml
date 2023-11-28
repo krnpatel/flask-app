@@ -23,8 +23,9 @@ phases:
       - docker push $REPOSITORY_URI:latest 
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
-      - printf '[{"name":"flask-app2-container","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions2.json
-      - cat imagedefinitions2.json
+      - printf '[{"name":"flask-app2-container","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - cat imagedefinitions.json
 artifacts:
   files:
-    - imagedefinitions2.json
+    - imagedefinitions.json
+  name: output-project2
