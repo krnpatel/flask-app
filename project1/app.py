@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "<html> <h1 style='color:red;'> <b> Good Morning - Project1 - V5 </b></h1></html>"
+    return "<html> <h1 style='color:red;'> <b> Good Morning - Project1 - V6 </b></h1></html>"
 
 @app.route("/kiran")
 def greeHello():
